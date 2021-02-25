@@ -1,0 +1,12 @@
+site_name: My Site
+theme:
+  name: material
+
+nav:
+  - Home: 'index.md'
+  - Writings:
+    - 'Book Reviews and Discussion': 'book_reviews.md'
+    - 'Other Musings': 'other_musings.md'
+  - About:
+    - 'About Me': 'about/about.md'
+    - 'My Journey': 'about/my_journey.md' 
