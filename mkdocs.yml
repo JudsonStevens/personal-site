@@ -1,12 +1,11 @@
-site_name: Musings
+site_name: The Warren
 theme:
   name: material
 
 nav:
   - Home: 'index.md'
   - Writings:
-    - 'Book Reviews and Discussion': 'book_reviews.md'
+    - 'Book Reviews/Discussion':
+      - 'Domain Driven Design Quickly': 'book_reviews/domain_driven_design_quickly/overview.md'
     - 'Other Musings': 'other_musings.md'
-  - About:
-    - 'About Me': 'about/about.md'
-    - 'My Journey': 'about/my_journey.md' 
+  - "About Me": "about.md"

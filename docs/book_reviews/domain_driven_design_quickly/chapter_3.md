@@ -17,13 +17,19 @@ While this isn't the place to get into [monoliths][3] vs [microservices][4], a l
 
 ## Entities, Value Objects and Services
 
+### Entities
+
 Entities play a central role in domain driven design. A key portion of what makes an object an entity is identity; if we create a person object, that person should have a unique identifier so we can keep track of them throught the operations of the system.
 
 >When an object is distinguished by its identity, rather than its attributes, make this primary to its definition in the model. Keep the class definition simple and focused on life cycle continuity and identity.
 
+### Value Objects
+
 Value Objects are the next pattern that is discussed. One of the most important aspects of a value object is *[immutability][6]*. They should be easy to create and easy to throw away. If a different value is needed, simply create a new object rather than changing the one you have. Value Objects are the workhorse of DDD - they can contain references to Entities, references to other Value Objects, a long list of attributes, or anything in between. The author makes a point, however, to say
 
 >Attributes chosen to make up a Value Object should form a conceptual whole.
+
+### Services
 
 Services typically start as the *actions* of the domain, or verbs used by the domain experts. Use an object to contain these actions so that they can operate across multiple different Entities and Value Objects. 
 

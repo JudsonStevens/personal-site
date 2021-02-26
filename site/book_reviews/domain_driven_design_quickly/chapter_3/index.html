@@ -14,7 +14,7 @@
     
     
       
-        <title>Chapter 3 - Musings</title>
+        <title>Chapter 3 - The Warren</title>
       
     
     
@@ -71,7 +71,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="../../.." title="Musings" class="md-header-nav__button md-logo" aria-label="Musings">
+    <a href="../../.." title="The Warren" class="md-header-nav__button md-logo" aria-label="The Warren">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -84,7 +84,7 @@
       <div class="md-header-nav__ellipsis">
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
-            Musings
+            The Warren
           </span>
         </div>
         <div class="md-header-nav__topic">
@@ -151,13 +151,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Musings" class="md-nav__button md-logo" aria-label="Musings">
+    <a href="../../.." title="The Warren" class="md-nav__button md-logo" aria-label="The Warren">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
     </a>
-    Musings
+    The Warren
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -206,10 +206,50 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" >
+      
+      <label class="md-nav__link" for="nav-2-1">
+        Book Reviews/Discussion
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Book Reviews/Discussion" data-md-level="2">
+        <label class="md-nav__title" for="nav-2-1">
+          <span class="md-nav__icon md-icon"></span>
+          Book Reviews/Discussion
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../" class="md-nav__link">
-        Book Reviews and Discussion
+      <a href="../../book_reviews/" class="md-nav__link">
+        Purpose
       </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../domain_driven_design_quickly/chapters_1_and_2.md" class="md-nav__link">
+        Domain Driven Design Quickly
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -330,6 +370,33 @@
     Entities, Value Objects and Services
   </a>
   
+    <nav class="md-nav" aria-label="Entities, Value Objects and Services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entities" class="md-nav__link">
+    Entities
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#value-objects" class="md-nav__link">
+    Value Objects
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#services" class="md-nav__link">
+    Services
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -357,14 +424,17 @@
 <p><img alt="Screenshot of a typical layered architecture solution. At the top, to the left, the bolded words &quot;User Interface (Presentation Layer)&quot; with the text &quot;Responsible for resenting information to the user and interpreting user commands&quot; to the right. After a dividing line, the bolded words &quot;Application Layer&quot; are to the left with the text &quot;This is a thin layer which coordinates the application activity. It does not contain business logic. It does not hold the state of the business objects, but it can hold the state of an application task progress&quot; to the right. After another dividing line, the bolded words &quot;Domain Layer&quot; to the left with the text &quot;This layer contains information about the domain. This is the heart of the business software. The state of business objects is held here. Persistence of the business objects and possibly their state is delegated to the infrastructure layer&quot; to the right. After another dividing line, the bolded words &quot;Infrastructure Layer&quot; with the text &quot;This layer acts as a supporting library for all the other layers. It provides communication between layers, implements persistence for business objects, contains supporting libraries for the user interface layer, etc&quot; to the right. This is followed by a final dividing line." src="../../../img/DDDQ_Four_Layers.png?raw=true" title="Typical Four Layers of a Software Application" /></p>
 <p>While this isn't the place to get into <a href="https://m.signalvnoise.com/the-majestic-monolith/" title="A post by DHH of Rails fame about the 'Majestic Monolith'">monoliths</a> vs <a href="https://martinfowler.com/articles/dont-start-monolith.html" title="A post from Stefan Tilkov on why you should start with microservices... if your goal is microservices">microservices</a>, a layered architecture can be one or the other (or maybe a <a href="https://www.simplethread.com/youre-not-actually-building-microservices/" title="A post about distributed monoliths from">little of... both?</a> That's a bad idea). The main idea here is that if conceptually you divide your layers and use separate models in each one without intertwining them <em>too</em> tightly, you can keep to the idea of a multi-layered architecture in a monolithic app.</p>
 <h2 id="entities-value-objects-and-services">Entities, Value Objects and Services</h2>
+<h3 id="entities">Entities</h3>
 <p>Entities play a central role in domain driven design. A key portion of what makes an object an entity is identity; if we create a person object, that person should have a unique identifier so we can keep track of them throught the operations of the system.</p>
 <blockquote>
 <p>When an object is distinguished by its identity, rather than its attributes, make this primary to its definition in the model. Keep the class definition simple and focused on life cycle continuity and identity.</p>
 </blockquote>
+<h3 id="value-objects">Value Objects</h3>
 <p>Value Objects are the next pattern that is discussed. One of the most important aspects of a value object is <em><a href="https://web.mit.edu/6.005/www/fa15/classes/09-immutability/" title="A lesson from MIT about mutability and immutability">immutability</a></em>. They should be easy to create and easy to throw away. If a different value is needed, simply create a new object rather than changing the one you have. Value Objects are the workhorse of DDD - they can contain references to Entities, references to other Value Objects, a long list of attributes, or anything in between. The author makes a point, however, to say</p>
 <blockquote>
 <p>Attributes chosen to make up a Value Object should form a conceptual whole.</p>
 </blockquote>
+<h3 id="services">Services</h3>
 <p>Services typically start as the <em>actions</em> of the domain, or verbs used by the domain experts. Use an object to contain these actions so that they can operate across multiple different Entities and Value Objects. </p>
 <blockquote>
 <p>For example, to transfer money from one account to another; should that function be in the sending account or the receiving account? </p>
