@@ -14,7 +14,7 @@
     
     
       
-        <title>Chapters 4 and 5 - The Warren</title>
+        <title>Chapters 4 and 5 - Writings</title>
       
     
     
@@ -71,7 +71,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="../../.." title="The Warren" class="md-header-nav__button md-logo" aria-label="The Warren">
+    <a href="../../.." title="Writings" class="md-header-nav__button md-logo" aria-label="Writings">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -84,7 +84,7 @@
       <div class="md-header-nav__ellipsis">
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
-            The Warren
+            Writings
           </span>
         </div>
         <div class="md-header-nav__topic">
@@ -151,13 +151,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="The Warren" class="md-nav__button md-logo" aria-label="The Warren">
+    <a href="../../.." title="Writings" class="md-nav__button md-logo" aria-label="Writings">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
     </a>
-    The Warren
+    Writings
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -293,6 +293,54 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-4-refactoring-towards-deeper-insight" class="md-nav__link">
+    Chapter 4 - Refactoring Towards Deeper Insight
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter 4 - Refactoring Towards Deeper Insight">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#continuous-refactoring" class="md-nav__link">
+    Continuous Refactoring
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-5-preserving-model-integrity" class="md-nav__link">
+    Chapter 5 - Preserving Model Integrity
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter 5 - Preserving Model Integrity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bounded-context" class="md-nav__link">
+    Bounded Context
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -305,6 +353,20 @@
                 
                 
                 <h1 id="chapters-4-and-5">Chapters 4 and 5</h1>
+<h2 id="chapter-4-refactoring-towards-deeper-insight">Chapter 4 - Refactoring Towards Deeper Insight</h2>
+<h3 id="continuous-refactoring">Continuous Refactoring</h3>
+<p>The author defines refactoring as </p>
+<blockquote>
+<p>Refactoring is the process of redesigning the code to make it better without changing application behavior.</p>
+</blockquote>
+<p>Refactoring should be considered when it is apparent that some assumption or decision made about a model was incorrect. There are, of course, differing levels of incorrect. An assumption that causes a small issue in a little used piece of code may not need to be refactored immediately. An incorrect assumption about the way two models connect, however, may cause development to grind to a halt until the problem is fixed.</p>
+<p>There is a distinction made here between <a href="https://refactoring.com/" title="Martin Fowlers site on refactoring"><em>technical</em> refactoring</a> and <em>refactoring towards a deeper insight</em>. While the former is well suited to patterns and a structured process, the latter is the result of deep insight and experience within a domain. As time progresses on a project, you'll find yourself making connections that were not obvious from the beginning. You'll also find yourself wishing that certain models and ideas were expressed more clearly, or the connections between them defined more definitevely. These ideas should help inform your refactoring process. </p>
+<p>Ensure that the domain experts are intimately involved with the refactoring process. As concepts are revealed through this process, they may be able to take the small thoughts and ideas you have and grow them with the benefit of their domain specific knowledge. Be careful; some domain experts are going to disagree with other experts, or suggest integrations and changes in different ways. Refactoring can be a complex balancing process where many different experts and developers may want to have their input heard. Utilize the built and developing Ubiquitous Language as heavily as possible. The author mentions yes or no questions about models as an example of business rules that can be applied to the model. There is a tendancy, however, to let those rules bloat the model - a simple check to see if a Customer is elegible for a discount could entail multiple different queries to different parts of the application to check their status, their account, and their previous purchases, for example. The author recommends keeping such rules in the domain layer and refactoring them into Specification objects.</p>
+<p>One thing to consider while refactoring - try to keep the future developers of the code in mind. In some cases, this may even be you. Think about legacy code you may have had to refactor and use those lessons to inform your choices now. If you had to come back in five years and refactor your code, how would you want it to look?</p>
+<h2 id="chapter-5-preserving-model-integrity">Chapter 5 - Preserving Model Integrity</h2>
+<p>Maintaining the integrity of the different models that are part of the domain as they are being developed by multiple teams can be a complex task. Without clean and clear dividing lines between teams, it can be easy to drive a good model to an inconsistent one. Keep an eye towards splitting models up into smaller, more succint models. The <em>interface</em> between models should be kep as <a href="https://stackoverflow.com/questions/2339048/guidelines-for-designing-clean-interface" title="Stack Overflow question and answers about 'clean' interfaces"><em>clean</em></a> as possible. </p>
+<h3 id="bounded-context">Bounded Context</h3>
+<p>The author starts this subchapter by pointing out that every model has it's context. This context is easy to define with an application that has one model, or an application specifically made to work with a legacy application. However, this equation becomes more difficult as the application grows. Keeping the context of models <em>bound</em> is an important job and should be something that is done consciously. Keep the model <em>unified</em> as much as possible. </p>
                 
               
               
